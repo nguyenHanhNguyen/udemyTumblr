@@ -1,13 +1,15 @@
-<!--Must define @post in the controller before using in the view file-->
-<!--@post is instance variable-->
-<h1 class="title">
-  <%= @post.title %>
-</h1>
+<div id="post_content">
+  <!--Must define @post in the controller before using in the view file-->
+  <!--@post is instance variable-->
+  <h1 class="title">
+    <%= @post.title %>
+  </h1>
 
-<p class="date">
-  Submitted <%= time_ago_in_words(@post.created_at) %> ago
-</p>
+  <p class="date">
+    Submitted <%= time_ago_in_words(@post.created_at) %> ago
+  </p>
 
-<p class="body">
-  <%= @post.body %>
-</p>
+  <p class="body">
+    <%= @post.body %>
+  </p>
+</div>
