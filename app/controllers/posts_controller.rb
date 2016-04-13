@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+  before_action :authenticate_user!, except: [:index, :show]
   #Display all postS in the descending of time
   def index
     @posts = Post.all.order('created_at DESC')
